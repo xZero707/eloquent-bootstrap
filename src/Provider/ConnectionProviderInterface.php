@@ -13,68 +13,68 @@ interface ConnectionProviderInterface
      *
      * @return string
      */
-    public function getDriver(): string;
+    public function getDriver();
 
     /**
      * Get database host
      *
      * @return string
      */
-    public function getHost(): string;
+    public function getHost();
 
     /**
      * Get database username
      *
      * @return string
      */
-    public function getUsername(): string;
+    public function getUsername();
 
     /**
      * Get database password
      *
      * @return string
      */
-    public function getPassword(): string;
+    public function getPassword();
 
     /**
      * Get database name
      *
      * @return string
      */
-    public function getDatabase(): string;
+    public function getDatabase();
 
     /**
      * Get database charset/encoding
      *
      * @return string
      */
-    public function getCharset(): string;
+    public function getCharset();
 
     /**
      * Get database collation
      *
      * @return string
      */
-    public function getCollation(): string;
+    public function getCollation();
 
     /**
      * Get database prefix
      *
      * @return string
      */
-    public function getPrefix(): string;
+    public function getPrefix();
 
     /**
      * Get connection name
      *
      * @return string
      */
-    public function getName(): string;
+    public function getName();
 
     /**
      * Get connection config
      *
      * @return ConfigProviderInterface
      */
-    public function getConfig(): ConfigProviderInterface;
+    public function getConfig();
 }

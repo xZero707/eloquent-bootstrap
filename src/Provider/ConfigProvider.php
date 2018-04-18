@@ -26,7 +26,7 @@ class ConfigProvider extends ArrayIterator implements ConfigProviderInterface
      * @param string $alias
      * @param array|null $config
      */
-    public function __construct(array $config = null, string $alias = 'default')
+    public function __construct(array $config = null, $alias = 'default')
     {
         $this->alias = $alias;
 
@@ -54,7 +54,7 @@ class ConfigProvider extends ArrayIterator implements ConfigProviderInterface
     /**
      * {@inheritdoc}
      */
-    public static function getInstance(string $alias = 'default')
+    public static function getInstance($alias = 'default')
     {
         return self::$instances[$alias] ?? null;
     }
@@ -78,7 +78,7 @@ class ConfigProvider extends ArrayIterator implements ConfigProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function toObject(): StdClass
+    public function toObject()
     {
         return (object)$this->config;
     }
@@ -86,7 +86,7 @@ class ConfigProvider extends ArrayIterator implements ConfigProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getAlias(): string
+    public function getAlias()
     {
         return $this->alias;
     }

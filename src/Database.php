@@ -51,7 +51,7 @@ class Database
      *
      * @return Database
      */
-    public static function getInstance(): Database
+    public static function getInstance()
     {
         return static::$instance ?? new static();
     }
@@ -61,7 +61,7 @@ class Database
      *
      * @return Database
      */
-    public function init(): Database
+    public function init()
     {
         // Boot the Eloquent ORM…
         $this->capsule->bootEloquent();
@@ -77,7 +77,7 @@ class Database
      *
      * @return Database
      */
-    public function addConnection(ConnectionProviderInterface $connection): Database
+    public function addConnection(ConnectionProviderInterface $connection)
     {
         /** @var array $parameters */
         $parameters = [
@@ -100,7 +100,7 @@ class Database
      *
      * @return bool
      */
-    public function hasConnections(): bool
+    public function hasConnections()
     {
         return $this->flagHasConnections;
     }
@@ -110,7 +110,7 @@ class Database
      *
      * @return bool
      */
-    public function isBooted(): bool
+    public function isBooted()
     {
         return $this->flagIsBooted;
     }
@@ -120,7 +120,7 @@ class Database
      *
      * @return ConnectionProviderInterface[]
      */
-    public function getConnections(): array
+    public function getConnections()
     {
         return $this->connections;
     }
@@ -130,7 +130,7 @@ class Database
      *
      * @return Capsule
      */
-    public function getCapsule(): Capsule
+    public function getCapsule()
     {
         return $this->capsule;
     }

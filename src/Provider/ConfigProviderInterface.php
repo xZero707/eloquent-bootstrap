@@ -17,7 +17,7 @@ interface ConfigProviderInterface
      *
      * @return ConfigProviderInterface|null
      */
-    public static function getInstance(string $alias = 'default');
+    public static function getInstance($alias = 'default');
 
     /**
      * Get config option value
@@ -33,19 +33,19 @@ interface ConfigProviderInterface
      *
      * @return array
      */
-    public function toArray(): array;
+    public function toArray();
 
     /**
      * Get configuration as is
      *
      * @return StdClass
      */
-    public function toObject(): StdClass;
+    public function toObject();
 
     /**
      * Get alias
      *
      * @return string
      */
-    public function getAlias(): string;
+    public function getAlias();
 }

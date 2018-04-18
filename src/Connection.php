@@ -23,7 +23,7 @@ class Connection implements ConnectionProviderInterface
      * @param string $name
      * @param ConfigProviderInterface $config
      */
-    public function __construct(string $name, ConfigProviderInterface $config)
+    public function __construct($name, ConfigProviderInterface $config)
     {
         $this->name   = $name;
         $this->config = $config;
@@ -32,7 +32,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getDriver(): string
+    public function getDriver()
     {
         return $this->config->getOption('driver');
     }
@@ -40,7 +40,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getHost(): string
+    public function getHost()
     {
         return $this->config->getOption('host');
     }
@@ -48,7 +48,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getUsername(): string
+    public function getUsername()
     {
         return $this->config->getOption('username');
     }
@@ -56,7 +56,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getPassword(): string
+    public function getPassword()
     {
         return $this->config->getOption('password');
     }
@@ -64,7 +64,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getDatabase(): string
+    public function getDatabase()
     {
         return $this->config->getOption('database');
     }
@@ -72,7 +72,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getCharset(): string
+    public function getCharset()
     {
         return $this->config->getOption('charset');
     }
@@ -80,7 +80,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getCollation(): string
+    public function getCollation()
     {
         return $this->config->getOption('collation');
     }
@@ -88,7 +88,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getPrefix(): string
+    public function getPrefix()
     {
         return $this->config->getOption('prefix');
     }
@@ -96,7 +96,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }
@@ -104,7 +104,7 @@ class Connection implements ConnectionProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getConfig(): ConfigProviderInterface
+    public function getConfig()
     {
         return $this->config;
     }
