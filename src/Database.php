@@ -53,7 +53,7 @@ class Database
      */
     public static function getInstance()
     {
-        return static::$instance ?? new static();
+        return (static::$instance === null) ? new static() : static::$instance;
     }
 
     /**
