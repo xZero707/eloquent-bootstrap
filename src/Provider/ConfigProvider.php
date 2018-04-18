@@ -56,7 +56,7 @@ class ConfigProvider extends ArrayIterator implements ConfigProviderInterface
      */
     public static function getInstance($alias = 'default')
     {
-        return self::$instances[$alias] ?? null;
+        return isset(self::$instances[$alias]) ? self::$instances[$alias] : null;
     }
 
     /**
@@ -64,13 +64,13 @@ class ConfigProvider extends ArrayIterator implements ConfigProviderInterface
      */
     public function getOption($name)
     {
-        return $this->config[$name] ?? null;
+        return isset($this->config[$name]) ? $this->config[$name] : null;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function toArray(): array
+    public function toArray()
     {
         return $this->config;
     }
@@ -96,7 +96,7 @@ class ConfigProvider extends ArrayIterator implements ConfigProviderInterface
      */
     public function __get($name)
     {
-        return $this->config[$name] ?? null;
+        return isset($this->config[$name]) ? $this->config[$name] : null;
     }
 
     /**
